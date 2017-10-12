@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApplication1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="7179.721" Width="1257.237">
+    <Window.DataContext>
+        <local:ViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="GrillaA" AutoGenerateColumns="True" IsReadOnly="True" SelectionMode="Single" ItemsSource="{Binding Lista1}" SelectedIndex="{Binding SelectedA,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <DataGrid Grid.Column="1" x:Name="GrillaB" AutoGenerateColumns="True" IsReadOnly="True" SelectionMode="Single" ItemsSource="{Binding Lista2}" SelectedIndex="{Binding SelectedB,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+
+    </Grid>
+</Window>
