@@ -10,27 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WpfApplication1.Views;
 
-namespace WpfApplication1
+namespace WpfApplication1.Views
 {
     /// <summary>
-    /// Lógica de interacción para MainWindow.xaml
+    /// Lógica de interacción para otrotest.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class otrotest : Window
     {
-        public MainWindow()
+        public otrotest()
         {
             InitializeComponent();
-            this.DataContext = new ViewModel();
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            otrotest ventana = new otrotest();
-            ventana.ShowDialog();
+            this.DataContext = new ViewModels.VMotrotest();
         }
     }
 }
