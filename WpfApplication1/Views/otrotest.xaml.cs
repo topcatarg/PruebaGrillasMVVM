@@ -24,5 +24,10 @@ namespace WpfApplication1.Views
             InitializeComponent();
             this.DataContext = new ViewModels.VMotrotest();
         }
+
+        private void dgListaC_TargetUpdated(object sender, DataTransferEventArgs e)
+        {
+            dgListaC.SelectedIndex = 0;
+        }
     }
 }

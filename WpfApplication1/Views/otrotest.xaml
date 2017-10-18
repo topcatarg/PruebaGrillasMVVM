@@ -18,7 +18,7 @@
             <RowDefinition Height="43*"/>
         </Grid.RowDefinitions>
         <DataGrid x:Name="dgListaB" ItemsSource="{Binding ListaB}" SelectedIndex="{Binding SelectedA, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
-        <DataGrid x:Name="dgListaC" Grid.Row="2" ItemsSource="{Binding SelectedItem.ListaC, ElementName=dgListaB}" SelectedIndex="{Binding SelectedB, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        <DataGrid x:Name="dgListaC" Grid.Row="2" ItemsSource="{Binding SelectedItem.ListaC, ElementName=dgListaB, NotifyOnTargetUpdated=True}" TargetUpdated="dgListaC_TargetUpdated" />
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding SelectedItem.BA, ElementName=dgListaB}" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,62,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{Binding SelectedItem.BB, ElementName=dgListaB}" VerticalAlignment="Top" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" Grid.Row="3" TextWrapping="Wrap" Text="{Binding SelectedItem.CA, ElementName=dgListaC}" VerticalAlignment="Top" Width="120"/>

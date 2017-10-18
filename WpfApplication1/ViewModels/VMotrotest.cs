@@ -14,7 +14,7 @@ namespace WpfApplication1.ViewModels
         public event PropertyChangedEventHandler PropertyChanged;
 
         private int _selectedA;
-        private int _selectedB;
+        private int _selectedB = -1;
         public int SelectedA
         {
             get { return this._selectedA; }
@@ -32,6 +32,7 @@ namespace WpfApplication1.ViewModels
             set
             {
                 this._selectedB = value;
+                Console.WriteLine(value);
                 NotifyPropertyChanged();
             }
 
